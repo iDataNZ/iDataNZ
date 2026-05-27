@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reaction Click Test</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="reaction-stage is-idle" id="stage" aria-live="polite">
+        <div class="stats">
+          <div>
+            <span>Last</span>
+            <strong id="lastTime">--</strong>
+          </div>
+          <div>
+            <span>Best</span>
+            <strong id="bestTime">--</strong>
+          </div>
+          <div>
+            <span>Average</span>
+            <strong id="averageTime">--</strong>
+          </div>
+        </div>
+
+        <div class="readout">
+          <p class="eyebrow" id="stateLabel">Reaction Test</p>
+          <h1 id="headline">Click Start</h1>
+          <p id="message">Wait for the screen to turn red, then click Stop as fast as you can.</p>
+          <button id="actionButton" type="button">Start</button>
+        </div>
+      </section>
+
+      <section class="history" aria-label="Recent attempts">
+        <div class="history-actions">
+          <button id="clearButton" type="button">Clear History</button>
+          <button id="saveButton" type="button">Save Records</button>
+        </div>
+        <div class="attempts" id="attempts"></div>
+        <p class="save-status" id="saveStatus" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
